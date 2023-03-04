@@ -3,3 +3,6 @@
 |  `--, |  .--' ,-.  ||  ||  ||      \' .-. |
 |  |`   |  |  \ '-'  |'  ''  '|  ||  |\ `-' |
 `--'    `--'   `--`--' `----' `--''--' `---'
+
+${application.title} ${application.version}
+Powered by Spring Bott ${spring-boot.version}
