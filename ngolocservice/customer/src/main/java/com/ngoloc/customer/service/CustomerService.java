@@ -1,5 +1,6 @@
 package com.ngoloc.customer.service;
 
+import com.ngoloc.amqb.RabbitMQMessageProducer;
 import com.ngoloc.clients.fraud.FraudCheckResponse;
 import com.ngoloc.clients.fraud.FraudClients;
 import com.ngoloc.clients.notification.NotificationClient;
@@ -17,9 +18,9 @@ public class CustomerService {
 
     private final RestTemplate restTemplate;
     private final CustomerRepository customerRepository;
-
     private final FraudClients fraudClients;
-    private final NotificationClient notificationClient;
+    //    private final NotificationClient notificationClient;
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
 
     public Customer registerCustomer(CustomerRegistationRequest customerRegistationRequest) {
@@ -53,7 +54,7 @@ public class CustomerService {
                         saveCustomer.getFirstName())
         );
 
-        notificationClient.sendNotification(notificationRequest);
+        rabbitMQMessageProducer.publish(notificationRequest, "internal.exchange", "internal.notification.routing-key");
 
         return saveCustomer;
     }
