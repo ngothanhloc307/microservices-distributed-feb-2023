@@ -1,0 +1,8 @@
+com\ngoloc\notification\service\NotificationService.class
+com\ngoloc\notification\entity\Notification$NotificationBuilder.class
+com\ngoloc\notification\controller\NotificationController.class
+com\ngoloc\notification\rabbitmq\NotificationConsumer.class
+com\ngoloc\notification\entity\Notification.class
+com\ngoloc\notification\NotificationApplication.class
+com\ngoloc\notification\configuration\NotificationConfig.class
+com\ngoloc\notification\repository\NotificationRepository.class

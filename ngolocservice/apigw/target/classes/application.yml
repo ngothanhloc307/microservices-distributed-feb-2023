@@ -17,3 +17,10 @@ spring:
           predicates:
             - Path=/api/v1/customers/**
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+

@@ -1,0 +1,4 @@
+com\ngoloc\clients\fraud\FraudCheckResponse.class
+com\ngoloc\clients\notification\NotificationClient.class
+com\ngoloc\clients\notification\NotificationRequest.class
+com\ngoloc\clients\fraud\FraudClients.class
